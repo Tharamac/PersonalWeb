@@ -1,9 +1,17 @@
-<nav>
-  <ul>
-  {%- for nav in collections.nav | sort(attribute="date") -%}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{ '/' | url }}">{{ metadata.title }}'s Website</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse order-3 dual-collapse2" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      {%- for nav in collections.nav | sort(attribute="date") -%}
     <li>
-      <a href="{{ nav.url | url }}"{% if nav.url == page.url %} data-current="current item"{% endif %}>{{ nav.data.navtitle }}</a>
+      <a class="nav-link" href="{{ nav.url | url }}"{% if nav.url == page.url %} data-current="current item"{% endif %}>{{ nav.data.navtitle }}</a>
     </li>
   {%- endfor -%}
-  </ul>
+    </ul>
+  </div>
 </nav>
+

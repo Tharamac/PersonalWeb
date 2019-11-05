@@ -22,8 +22,34 @@ body {
 	background-color: var(--turkey);
 }
 
+li > .nav-link{
+	margin: 0 3em;
+}
+
+header nav li{
+	margin:0 1em !important;
+}
+
+.navbar-toggler{
+		width : 3em;
+		margin: 0;
+	}
+.navbar-brand{
+		color: azure !important;
+		margin: 0 3em;
+}
+
+#welcome{
+	background-color:orange;
+	height:100%;
+	 width: 100%; 
+}
+
+
+
 main {
-	max-width: 37.5em;
+	/* max-width: 100%;  */
+	padding-bottom: 0 !important;
 }
 
 p,
@@ -41,10 +67,9 @@ a[href]:not(:hover) {
 	text-decoration: none;
 }
 
-header,
-main,
+
 footer {
-	padding: 1em;
+	background-color: #444444;
 }
 
 main {
